@@ -59,9 +59,9 @@ Load Primer3
 ```
 module load primer3
 ```
-We are going to run Primer3 on an example file that I included in the tar you downloaded called "example.txt".
+We are going to run Primer3 on an example file that I included in the tarball you downloaded called "example.txt".
 
-Find this file in the tar. Remember, that you need to extract the files from it first using the <code>tar</code> command.
+Find this file in the tarball. Remember, that you need to extract the files from it first using the <code>tar</code> command.
 
 What is in "example.txt"? If you need help interpreting the lines, see the primer3 documentation here: https://primer3.org/manual.html
 
