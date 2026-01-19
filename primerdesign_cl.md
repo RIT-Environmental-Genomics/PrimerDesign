@@ -2,6 +2,8 @@
 
 **You made it!** For the rest of this lab, you are going to reproduce the work you did in the Benchling GUI using the command line version of the Primer3 algorithm (the same algorithm used in Benchling and most other primer design tools).
 
+$${\color{lightblue}Light \space Blue}$$
+
 To start, you need to access the Bioinformatics cluster, **Oedipus**.
 
 ## Working in the cluster
@@ -15,26 +17,26 @@ ssh XXX@oedipus.bioinformatics.rit.edu
 You should be prompted to enter your password.
 
 ### Navigating to your home directory
-Now that you are connected to the cluster, navigate to your home directory using <span style="color:lightblue">cd</span>. Is there anything in it?
+Now that you are connected to the cluster, navigate to your home directory using <code>cd</code>. Is there anything in it?
 
-Create a new directory for this lab exercise called "Lab2" using <span style="color:lightblue">mkdir</span>. We will use this directory to store all your input and output files.
+Create a new directory for this lab exercise called "Lab2" using <code>mkdir</code>. We will use this directory to store all your input and output files.
 ```
 mkdir Lab2
 ```
 ### Moving files from your computer to the cluster
-Outside the terminal, download the tar file in this Git repository called "Lab2_cl.tar" to your computer. We are going to use the files within this tar for parts of the lab.
+Outside the terminal, download the tar file (known as a tarball) in this Git repository called "Lab2_cl.tar" to your computer. We are going to use the files within this tar for parts of the lab.
 
 Once you have the tar downloaded to your computer, you need to move it to your directory on the cluster so you can use it within Primer3.
 
-> I know I just had you login to the cluster, *but* you need your terminal to be logged into your local computer to upload to the cluster from your computer. To exit the cluster, just use <span style="color:lightblue">exit</span>.
+> I know I just had you login to the cluster, *but* you need your terminal to be logged into your local computer to upload to the cluster from your computer. To exit the cluster, just use <code>exit</code>.
 
-You can use the <span style="color:lightblue">scp</span> command to move files between machines. Make sure to change out the actual file paths from my example code below and to place them in the Lab2 directory you just created.
+You can use the <code>scp</code> command to move files between machines. Make sure to change out the actual file paths from my example code below and to place them in the Lab2 directory you just created.
 
 To move an individual file, use: 
 ```
 scp /path/to/your/file.txt user@cluster_address:/path/in/cluster
 ```
-To move an entire directory, you need to use the -r (recursive) flag after <span style="color:lightblue">scp</span>: 
+To move an entire directory, you need to use the -r (recursive) flag after <code>scp</code>: 
 ```
 scp -r directory/on/local/computer/ user@cluster_address:/path/in/cluster
 ```
@@ -47,7 +49,7 @@ By default, modules are not loaded onto our individual work space. If we want to
 
 Compartmentalizing modules/packages allows you to select which versions you want to use when. This is important for ensuring your scripts will work in perpetuity, even when developers update packages.
 
-To see available modules on the HPC, use <span style="color:lightblue">module avail</span> command. 
+To see available modules on the HPC, use <code>module avail</code> command. 
 ```
 module avail
 ```
@@ -61,13 +63,13 @@ module load primer3
 ```
 We are going to run Primer3 on an example file that I included in the tar you downloaded called "example.txt".
 
-Find this file in the tar. Remember, that you need to extract the files from it first using the <span style="color:lightblue">tar</span> command.
+Find this file in the tar. Remember, that you need to extract the files from it first using the <code>tar</code> command.
 
 What is in "example.txt"? If you need help interpreting the lines, see the primer3 documentation here: https://primer3.org/manual.html
 
 > **Important:** Do you notice that the file ends with an equal sign? This is important to the formatting of Primer3. The last line of the file *always* needs to be an equals sign!
 
-Okay, now run the primer design tool using the <span style="color:lightblue">primer3_core</span> command.
+Okay, now run the primer design tool using the <code>primer3_core</code> command.
 ```
 primer3_core example.txt
 ```
