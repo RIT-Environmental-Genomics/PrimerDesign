@@ -2,8 +2,6 @@
 
 **You made it!** For the rest of this lab, you are going to reproduce the work you did in the Benchling GUI using the command line version of the Primer3 algorithm (the same algorithm used in Benchling and most other primer design tools).
 
-$${\color{lightblue}Light \space Blue}$$
-
 To start, you need to access the Bioinformatics cluster, **Oedipus**.
 
 ## Working in the cluster
