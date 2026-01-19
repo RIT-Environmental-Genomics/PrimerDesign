@@ -8,7 +8,7 @@ To start, you need to access the Bioinformatics cluster, **Oedipus**.
 > **NOTE:** You should have received an email with your username and password info for accessing Oedipus. I *do not* have access to this information.
 
 ### Accessing the cluster via terminal
-To access the cluster remotely, you will use <code style="color : lightskyblue">ssh</code>. Remember to change "XXX" to your assigned username.
+To access the cluster remotely, you will use <code>ssh</code>. Remember to change "XXX" to your assigned username.
 ```
 ssh XXX@oedipus.bioinformatics.rit.edu
 ```
