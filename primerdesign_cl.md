@@ -43,22 +43,49 @@ The terminal will then ask you for your cluster password, which is the same one 
 > **NOTE:** If you have a Windows computer, you might notice that files paths on your machine use backslashes instead of forward slashes, which are used by Mac/Linux computers.
 
 ### Accessing software and packages
-By default, modules are not loaded onto our individual work space. If we want to use a module or package, we will need to “load” it. You might wonder **why** modules/packages are not autoloaded and the biggest reasons are incompatbility and versioning. 
+By default, software is not loaded onto our individual work space. If we want to use a module or package, we will need to “load” it. We usually package these within coding **environments**. We are going to use conda environments. 
+
+You might wonder **why** modules/packages are not autoloaded and the biggest reasons are incompatbility and versioning. 
 
 Compartmentalizing modules/packages allows you to select which versions you want to use when. This is important for ensuring your scripts will work in perpetuity, even when developers update packages.
 
-To see available modules on the HPC, use <code>module avail</code> command. 
+To see available packages on the HPC, use <code>conda list</code> command. 
 ```
-module avail
+conda list
 ```
-What modules are available?
+Oedipus already has a few prebuilt environments. To see their names, run:
+```
+conda env list
+```
+What environments currently exist?
+
+Unfortunately, Primer3 is not currently installed but that is okay! You can create your own conda environment and install it there!
 
 ## Running Primer3
+
+### Creating a conda environment
+
+You are going to create a new environment called "primer3". TO do that, run the following code:
+```
+conda create --name primer3
+```
+
+It will ask you to accept some terms (run "a" and select "y" when it asks if you want to proceed). Now, activate your environment with:
+```
+conda activate primer3
+```
+
+You should now see that your terminal shows that you are in an environment denoted by the parentheses in front of your account:
+```
+(primer3) XXX@oedipus:~$
+```
+
+To install the Primer3 package in this new environment, run (again run "y" when it asks if you want to proceed):
+```
+conda install bioconda::primer3
+```
+
 ### Running Primer3 on an example file
-Load Primer3
-```
-module load primer3
-```
 We are going to run Primer3 on an example file that I included in the tarball you downloaded called "example.txt".
 
 Find this file in the tarball. Remember, that you need to extract the files from it first using the <code>tar</code> command.
